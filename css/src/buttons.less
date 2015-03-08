@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/**
+ * buttons
+ * @authors leedow (644743991@qq.com)
+ * @website http://www.leedow.com
+ * @date    2015-03-08 13:04:42
+ * @version $Id$
+ */
+button{
+	font-family: @global-font-family;
+}
+
+/////////////////////////////
+//按钮样式
+.lee-btn, 
+.lee-btn-default,
+.lee-btn-warm,
+{
+	border-radius: @btn-radius;
+	border: @btn-border;
+	cursor: pointer;
+	.lee-btn-md;
+}
+
+.lee-btn{
+	background: @btn-background; 
+}
+
+.lee-btn:hover{
+	background: @btn-background-hv; 
+}
+
+.lee-btn-default{
+	background: @btn-background-default;
+	border: @btn-border-default;
+	color: @btn-color-default; 
+}
+
+.lee-btn-default:hover{
+	background: @btn-background-hv-default;
+	border: @btn-border-hv-default;
+}
+
+.lee-btn-warm{
+	background: @btn-background-warm;
+	border: @btn-border-warm;
+	color: @btn-color-warm;
+}
+
+.lee-btn-warm:hover{
+	background: @btn-background-hv-warm;
+	border: @btn-border-hv-warm;
+}
+////////////////////////////
+//按钮尺寸
+.lee-btn-sm{
+	padding: @btn-padding-sm;
+	font-size: @font-size-ti;
+}
+
+
+.lee-btn-md{
+	padding: @btn-padding-md;
+	font-size: @font-size-sm;
+}
+
+.lee-btn-lg{
+	padding: @btn-padding-lg;
+	font-size: @font-size-md;
+}
+

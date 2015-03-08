@@ -1,12 +1,19 @@
 @charset "UTF-8";
 /**
- * 
+ * Leeui2 样式配置文件
  * @authors leedow (644743991@qq.com)
  * @website http://www.leedow.com
  * @date    2015-03-07 14:57:04
  * @version $Id$
  */
+////////////////////////////////
+//基准颜色配置
+@base-line-color:		#eee;//线条颜色
+@base-light-color:		#eee;//浅色
+@base-main-color: 		#2b88cf;//主色
+@base-warm-color: 		#dd514c;//高亮色
 
+////////////////////////////////
 //字体相关配置
 @global-font-family:	'Microsoft YaHei', SimHei;//全局字体设置
 @global-font-size:		14px;//全局字体大小
@@ -17,5 +24,47 @@
 @font-size-sm:			14px;
 @font-size-ti:			12px;	
 
-//布局宽度设置
+/////////////////////////////////
+//布局相关设置
+@layout-background:		rgba(255, 255, 255, 0.9);//遮罩层背景颜色
+
+
+@menu-layout-height: 	60px;//下方菜单栏高度
 			
+//////////////////////////////////
+//header相关设置
+@header-height:			44px;
+@header-background:		@base-main-color;
+@header-font-color:		#fff;
+@header-padding-v:		10px;
+@header-padding-h:		20px;
+@header-line-height:	(@header-height - @header-padding-v*2);
+@header-border-bottom:	1px @base-line-color solid;
+
+/////////////////////////////////
+//按钮
+
+//按钮尺寸外形
+@btn-padding-lg:		15px 20px;
+@btn-padding-md:		10px 15px;
+@btn-padding-sm:		5px 10px;		
+@btn-radius:			4px;
+	
+//默认无色样式按钮
+@btn-background:		none;
+@btn-border:			0;
+@btn-background-hv:		@base-light-color;
+
+//普通颜色按钮
+@btn-background-default:@base-main-color;
+@btn-background-hv-default:lighten(@base-main-color, 10%);
+@btn-border-default: 	1px @base-main-color solid;
+@btn-border-hv-default:	1px lighten(@base-main-color, 10%) solid;
+@btn-color-default:		#fff;
+
+//警告颜色按钮
+@btn-background-warm:	@base-warm-color;
+@btn-background-hv-warm:lighten(@base-warm-color, 10%);
+@btn-border-warm:		1px @base-warm-color solid;
+@btn-border-hv-warm:	1px lighten(@base-warm-color, 10%) solid;
+@btn-color-warm:		#fff;

@@ -7,11 +7,39 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link href="css/leeui.min.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src=""></script>
+<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="http://leeopen.sinaapp.com/angular/angular.min.js"></script>
+<script type="text/javascript" src="http://leeopen.sinaapp.com/angular/angular-route.min.js"></script>
+<script type="text/javascript" src="js/src/leeui.js"></script>
 </head>
-<body>
-	<div class="app-container">
-		
-	</div>
+<body ng-app="leeui">
+	<!--主界面-->
+	<section>
+		<div class="lee-container">
+			<div class="lee-header">
+				<button class="lee-btn button-left">
+					<i class="fa fa-chevron-left"></i>
+				</button>
+				Leeui2
+			</div>
+			<div class="lee-box">
+				<div class="lee-row">
+					Welcome to leeui2
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--子界面-->
+	<section class="lee-layout" ng-view>
+		 
+	</section>
+
+	<!--主菜单-->
+	<section class="lee-menu-layout">
+		<div >
+			This is menu layout
+		</div>
+	</section>
 </body>
 </html>

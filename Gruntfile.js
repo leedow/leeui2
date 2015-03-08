@@ -1,12 +1,11 @@
 module.exports = function(grunt){
-	grunt.initConfig({
-		/*
+	grunt.initConfig({		
 		uglify: {
 			build: {
-				src: ['usr/themes/vman/js/src/main.js'],
-				dest: 'usr/themes/vman/js/main.min.js'
+				src: ['js/src/leeui.js'],
+				dest: 'js/leeui.min.js'
 			}
-	    },*/
+	    },
 	    watch: {
 	    	client: {
 	    		files: ['*'],
@@ -15,8 +14,8 @@ module.exports = function(grunt){
 	    		}
 	    	},
 	    	less: {
-	    		files: ['css/src/*.less'],
-	    		tasks: ['less:dev'/*, 'uglify:build'*/]
+	    		files: ['css/src/*.less', 'js/src/*'],
+	    		tasks: ['less:dev', 'uglify:build']
 	    	}
 	    },
 	    less: {
