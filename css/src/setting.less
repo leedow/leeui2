@@ -7,11 +7,15 @@
  * @version $Id$
  */
 ////////////////////////////////
-//基准颜色配置
+//基准配置
+
 @base-line-color:		#eee;//线条颜色
-@base-light-color:		#eee;//浅色
+@base-light-color:		#eee;//浅背景色
 @base-main-color: 		#2b88cf;//主色
 @base-warm-color: 		#dd514c;//高亮色
+
+@base-padding-v:		10px;
+@base-padding-h:		20px;
 
 ////////////////////////////////
 //字体相关配置
@@ -36,8 +40,8 @@
 @header-height:			44px;
 @header-background:		@base-main-color;
 @header-font-color:		#fff;
-@header-padding-v:		10px;
-@header-padding-h:		20px;
+@header-padding-v:		@base-padding-v;
+@header-padding-h:		@base-padding-h;
 @header-line-height:	(@header-height - @header-padding-v*2);
 @header-border-bottom:	1px @base-line-color solid;
 
