@@ -10,7 +10,7 @@
 <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="http://leeopen.sinaapp.com/angular/angular.min.js"></script>
 <script type="text/javascript" src="http://leeopen.sinaapp.com/angular/angular-route.min.js"></script>
-<script type="text/javascript" src="js/src/leeui.js"></script>
+<script type="text/javascript" src="js/leeui.min.js"></script>
 </head>
 <body ng-app="leeui">
 	<!--主界面-->
@@ -35,9 +35,11 @@
 
 	<!--主菜单-->
 	<section class="lee-menu-layout" id="test">
-		<div >
-			This is menu layout
-		</div>
+		<nav class="lee-menu">
+			 <a class="lee-btn lee-btn-menu" href="#/list"><i class="fa fa-th-list"></i> <span>目录</span></a> 
+			 <a class="lee-btn lee-btn-menu" href="#/"><i class="fa fa-home"></i> <span>首页</span></a> 
+			<a class="lee-btn lee-btn-menu" href="#/buttons"><i class="fa fa-hand-o-up"></i> <span>按钮</span></a> 
+		</nav>
 	</section>
 </body>
 </html>
