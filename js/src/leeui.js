@@ -33,29 +33,43 @@ var leeui = angular.module('leeui', ['ngRoute'])
 				document.querySelector('.lee-header').offsetHeight:0;
 			var heightMenu = document.querySelector('.lee-menu-layout')?
 				document.querySelector('.lee-menu-layout').offsetHeight:0;
-			var height = document.body.offsetHeight;
-			
-			function setHeight(h){
-				iElement.css({height : h + 'px'}); 
+			var height = document.body.clientHeight;
+		
+			function setHeight(ele, h){
+				ele.css({height : h + 'px'}); 
 			}
 
-			//alert(iAttrs.box);
-			switch(iAttrs.box){
-				case 'full': //全屏
-					setHeight(height);
-					break;
-				case 'header': //显示头部，不显示主菜单
-					setHeight(height - heightHeader);
-					break;
-				case 'menu': //显示菜单，不显示头部
-					setHeight(height - heightMenu);
-					break;
-				case 'mid': //显示菜单和头部
-					setHeight(height - heightMenu - heightHeader);
-					break;	
-				default:
-					setHeight(height);	
+			function  handleHeight(mode, ele){
+				switch(mode){
+					case 'full': //全屏
+						setHeight(ele, height);
+						break;
+					case 'header': //显示头部，不显示主菜单
+						setHeight(ele, height - heightHeader);
+						break;
+					case 'menu': //显示菜单，不显示头部
+						setHeight(ele, height - heightMenu);
+						break;
+					case 'mid': //显示菜单和头部
+						setHeight(ele, height - heightMenu - heightHeader);
+						break;	
+					default:
+						setHeight(ele, height);	
+				}
 			}
+
+			window.onresize = function(){//浏览器改变大小时自适应改变高度		
+				resizing = true;	
+				height = document.body.clientHeight;			
+				var items = document.querySelectorAll('.lee-box');			
+				var i = items.length;
+				while (i--){
+					var e = angular.element(items[i]);
+					handleHeight(e.attr('box'), e);
+				}	
+			}
+
+			handleHeight(iAttrs.box, iElement);
 		}
 	}
 })
