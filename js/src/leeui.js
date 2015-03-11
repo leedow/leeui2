@@ -5,23 +5,7 @@
  * @date    2015-03-07 19:40:26
  * @version $Id$
  */
-
-var leeui = angular.module('leeui', ['ngRoute'])
-
-/*
- * 配置路由
- */
-.config(['$routeProvider', function($routeProvider){			 
-	$routeProvider.
-	when('/buttons', {
-		templateUrl: 'views/buttons.html',
-		controller: ''
-	}).
-	when('/list', {
-		templateUrl: 'views/list.html',
-		controller: ''
-	})
-}])
+var leeui = angular.module('leeui', ['ngRoute','ngAnimate'])
 /*
  * 配置适应高度的指令，参数为full时全屏，参数为header时只显示头部
  * 参数为mid时显示头部和菜单，参数为menu时只显示菜单

@@ -4,16 +4,28 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- UC强制全屏 -->
+<meta name="full-screen" content="yes">
+<!-- QQ强制全屏 -->
+<meta name="x5-fullscreen" content="true">
+<!-- UC应用模式 -->
+<meta name="browsermode" content="application">
+<!-- QQ应用模式 -->
+<meta name="x5-page-mode" content="app">
+<!-- ios启用 WebApp 全屏模式 -->
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
 <title>Leeui2</title>
-
 <link href="css/leeui.min.css" type="text/css" rel="stylesheet">
 <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="../angular/angular.min.js"></script>
-<script type="text/javascript" src="../angular/angular-route.min.js"></script>
+<script type="text/javascript" src="../angular1.3.0/angular.min.js"></script>
+<script type="text/javascript" src="../angular1.3.0/angular-route.min.js"></script>
+<script type="text/javascript" src="../angular1.3.0/angular-animate.min.js"></script>
 <script type="text/javascript" src="js/leeui.min.js"></script>
+<script type="text/javascript" src="js/src/route.js"></script>
 </head>
 <body ng-app="leeui">
 	<!--主界面-->
+	<!--
 	<section>
 		<div class="lee-container-full">		 
 			<div class="lee-box" box="menu">
@@ -29,9 +41,9 @@
 			</div>
 		</div>
 	</section>
-
+	-->
 	<!--子界面-->
-	<section class="lee-layout" ng-view>
+	<section class="lee-layout tt" ng-view>
 		 
 	</section>
 
