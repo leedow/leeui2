@@ -19,23 +19,27 @@ var leeui = angular.module('leeui', ['ngRoute','ngAnimate'])
 				document.querySelector('.lee-menu-layout').offsetHeight:0;
 			var height = document.body.clientHeight;
 		
-			function setHeight(ele, h){
-				ele.css({height : h + 'px'}); 
+			function setHeight(ele, h, z){
+				ele.css({height : h + 'px'});
+				var m = document.querySelector('.lee-menu-layout');
+				if ( m!=null ) {
+					angular.element(m).css({'z-index' : z});
+				};
 			}
 
 			function  handleHeight(mode, ele){
 				switch(mode){
 					case 'full': //全屏
-						setHeight(ele, height);
+						setHeight(ele, height, 7777);
 						break;
 					case 'header': //显示头部，不显示主菜单
-						setHeight(ele, height - heightHeader);
+						setHeight(ele, height - heightHeader, 7777);
 						break;
 					case 'menu': //显示菜单，不显示头部
-						setHeight(ele, height - heightMenu);
+						setHeight(ele, height - heightMenu, 9999);
 						break;
 					case 'mid': //显示菜单和头部
-						setHeight(ele, height - heightMenu - heightHeader);
+						setHeight(ele, height - heightMenu - heightHeader, 9999);
 						break;	
 					default:
 						setHeight(ele, height);	
@@ -56,6 +60,10 @@ var leeui = angular.module('leeui', ['ngRoute','ngAnimate'])
 			handleHeight(iAttrs.box, iElement);
 		}
 	}
-})
+});
+//support AMD
+define([], function(){
+	return leeui;
+});
 
 

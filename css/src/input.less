@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/**
+ * input style
+ * @authors leedow (644743991@qq.com)
+ * @website http://www.leedow.com
+ * @date    2015-03-11 16:30:29
+ * @version $Id$
+ */
+.lee-input, .lee-input-block, .lee-icon-input{
+	padding: @input-padding;
+	border: 1px @base-line-color solid;
+	border-radius: @base-radius;
+	font-family: @global-font-family;
+}
+
+.lee-input-block{
+	display: block;
+	width: 100%;
+}
+
+.lee-icon-input{
+	padding: 0;
+	position: relative;
+
+	.icon-input{
+		padding: @input-padding;
+		padding-left: 40px;
+		border: 0;
+		font-family: @global-font-family;
+		width: 100%;
+	}
+
+	.input-icon{
+		position: absolute;
+		left:0;
+		top:0;
+		padding: @input-padding;
+	}
+}
