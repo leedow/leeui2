@@ -28,7 +28,9 @@ var leeui = angular.module('leeui', ['ngRoute','ngAnimate'])
 			}
 
 			function  handleHeight(mode, ele){
-				switch(mode){
+				var  tp = mode.split(' ');
+
+				switch(tp[0]){
 					case 'full': //全屏
 						setHeight(ele, height, 7777);
 						break;
@@ -44,6 +46,12 @@ var leeui = angular.module('leeui', ['ngRoute','ngAnimate'])
 					default:
 						setHeight(ele, height);	
 				}
+
+				if (tp[1] != undefined) {
+					var h = parseInt(ele.css('height')) - tp[1];
+					//console.log(h)
+					ele.css({height: h + 'px'});
+				};
 			}
 
 			window.onresize = function(){//浏览器改变大小时自适应改变高度		
@@ -62,8 +70,21 @@ var leeui = angular.module('leeui', ['ngRoute','ngAnimate'])
 	}
 });
 //support AMD
-define([], function(){
-	return leeui;
-});
+if (checkAMD()) {
+	define([], function(){
+		return leeui;
+	});
+};
+
+function checkAMD(){
+	try{
+		if (typeof define == "function") {
+			return true;
+		};
+	} catch(e){
+		return false;
+	}
+	return false;
+}
 
 
