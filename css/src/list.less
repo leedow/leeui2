@@ -39,12 +39,25 @@
 	i{
 		//color: @global-font-light-color;
 	}
+	.button-right, .button-right-bor{
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: @base-padding-v @base-padding-h;
+	}
+
+	.button-right-bor{
+		border-left: 1px @base-line-color solid;
+	}
+	.button-right:hover, .button-right-bor:hover{
+		background: @base-light-color;
+	}
 }
 
 
 
 .lee-list-item:hover{
-	background:  @base-light-color;//lighten(@base-light-color, 10%);
+	//background:  @base-light-color;//lighten(@base-light-color, 10%);
 }
 
 .lee-title, .lee-title-bor{
