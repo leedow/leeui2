@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/**
+ * 响应式样式
+ * @authors leedow (644743991@qq.com)
+ * @website http://www.leedow.com
+ * @date    2015-03-16 13:54:19
+ * @version $Id$
+ */
+@media only screen and (max-width: 1000px){
+	.lee-container{
+		width: 100%;	
+	}
+	.lee-menu{
+		width: 100%;	
+	}
+}
+
+@media only screen and (min-width: 1000px){
+	.lee-container{
+		width: @response-width;
+	}
+	.lee-menu{
+		width: @response-width;	
+	}
+}
+@media only screen and (min-width: 1000px) and (-moz-min-device-pixel-ratio: 2){
+	.lee-container{
+		width: @response-width;
+	}
+	.lee-menu{
+		width: @response-width;	
+	}
+}
+@media only screen and (min-width: 1000px) and (-o-min-device-pixel-ratio: 2/1){
+	.lee-container{
+		width: @response-width;
+	} 
+	.lee-menu{
+		width: @response-width;	
+	}
+} 
+@media only screen and (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 2){
+	.lee-container{
+		width: @response-width;
+	} 
+	.lee-menu{
+		width: @response-width;	
+	}
+}
+@media only screen and (min-width: 1000px) and (min-device-pixel-ratio: 2){
+	.lee-container{
+		width: @response-width;
+	} 
+	.lee-menu{
+		width: @response-width;	
+	}
+}
+ 
