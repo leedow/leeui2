@@ -43,4 +43,8 @@ app.config(['$routeProvider', function($routeProvider){
 		templateUrl: 'views/form/input.html',
 		controller: ''
 	})
+	.when('/form', {
+		templateUrl: 'views/form/form.html',
+		controller: ''
+	})
 }])
